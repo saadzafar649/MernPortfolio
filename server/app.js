@@ -1,5 +1,19 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const app = express();
+const mongoose = require('mongoose');
+
+
+dotenv.config({path: './config.env'})
+require('./db/conn');
+
+app.use(express.json())
+// const User = require('./model/userSchema')
+
+app.use(require('./router/auth'));
+
+const PORT = process.env.PORT;
+
 
 // Middleware
 
@@ -30,6 +44,6 @@ app.get('/signup',(req, res)=>{
 });
 
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log('server is running on port 3000')
 });
