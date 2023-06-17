@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 
-dotenv.config({path: './config.env'})
+dotenv.config({path: './.env'})
 require('./db/conn');
 
 app.use(express.json())
@@ -24,6 +24,7 @@ const middleware=(req,res,next)=>{
 
 
 app.get('/',(req, res)=>{
+    
     res.send('hello sent from my server')
 });
 
