@@ -6,7 +6,7 @@ import About from './components/About'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import Contact from './components/Contact'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 
 const App = () => {
   return (
