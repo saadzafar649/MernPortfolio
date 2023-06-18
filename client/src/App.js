@@ -7,10 +7,25 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import Contact from './components/Contact'
 import { Analytics } from '@vercel/analytics/react'
+import { ThemeProvider } from '@emotion/react'
+import { createTheme } from '@mui/material'
 
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#1976d2',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+  },
+  
+});
 const App = () => {
   return (
     <>
+    <ThemeProvider theme={theme}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
@@ -20,7 +35,9 @@ const App = () => {
         <Route path="/login" element={<Login />}/>
 
       </Routes>
+      </ThemeProvider>
       <Analytics />
+      
     </>
   )
 }
