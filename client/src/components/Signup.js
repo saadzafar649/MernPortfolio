@@ -4,6 +4,7 @@ import Mail from '@mui/icons-material/Mail';
 import Phone from '@mui/icons-material/Phone';
 import Password from '@mui/icons-material/Password';
 import PasswordTwoTone from '@mui/icons-material/PasswordTwoTone';
+import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 // import '@mui/icons-material/index'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -39,7 +40,7 @@ const Signup = () => {
           </Box>
 
           <Box sx={{ display: 'flex', alignItems: 'flex-end', margin: 2 }}>
-            <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
+            <SmartDisplayIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
             <TextField id="profession" label="Profession" variant="standard" sx={{ width: 400 }} />
           </Box>
 
@@ -57,7 +58,7 @@ const Signup = () => {
 
           <NavLink className="nav-link " aria-current="page" to="/login" sx={{ margin: 2, display: 'flex',justifySelf:'center' }}>
             <Button key={1} color="primary" variant='contained'>
-              Signup
+              Register
             </Button>
           </NavLink>
         </CardActions>
