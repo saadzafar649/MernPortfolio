@@ -17,9 +17,14 @@ const Signup = () => {
   return (
     <Box sx={{ display: "flex", justifyContent: "center", overflow: 'clip', margin: 5 }}>
 
-      <Card sx={{ minWidth: 200, maxWidth: 800, width: 600, display: 'flex', justifyContent: "center", flexFlow: 'wrap' }}>
+      <Card sx={{ minWidth: 200, maxWidth: 800, width: 600, display: 'flex', justifyContent: "center", flexFlow: 'wrap',  
+        border: '1px solid #ccc', borderRadius: 8,
+        backdropFilter: 'blur(20px)',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        paddingBottom:3,paddingTop:3, 
+        }}>
           <Typography variant="h5" component="h5" sx={{ fontWeight: 700 }}>
-            Signup
+            SignUp
           </Typography>
         <FormControl variant="standard" sx={{ fontWeight: 400, margin: 5, display: 'flex', justifySelf: "center", }}>
 
