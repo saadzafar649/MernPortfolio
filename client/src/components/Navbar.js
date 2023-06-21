@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import { NavLink } from 'react-router-dom'
 import logo from '../images/logo2.png'
-import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, MenuItem, StepIcon, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, Toolbar } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu';
 require('bootstrap')
@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (<>
     <AppBar position="static">
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between" ,maxHeight:'65px',minHeight:'65px'}}>
         <img src={logo} alt="logo" style={{ height: 60 }}></img>
         <IconButton
           color="inherit"
