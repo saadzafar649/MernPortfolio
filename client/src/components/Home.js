@@ -34,6 +34,12 @@ const Home = () => {
           }}>
             WE are the MERN Developers
           </Typography>
+          <Typography sx={{
+            display: 'flex', textAlign: 'center', alignContent: 'center',
+            fontSize: 30, fontWeight: 700, color: 'secondary.main'
+          }}>
+            Site Under Development
+          </Typography>
         </Box>
       </Stack>
 

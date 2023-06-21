@@ -95,14 +95,14 @@ const About = () => {
                   borderBottom: 'none',
                 }
               }}>
-                <TableCell>Email</TableCell>  <TableCell>saadzafar@gmail.com</TableCell>
+                <TableCell>Email</TableCell>  <TableCell>saadzafar649@gmail.com</TableCell>
               </TableRow>
               <TableRow sx={{
                 '&:not(:last-child) td': {
                   borderBottom: 'none',
                 }
               }}>
-                <TableCell>Phone</TableCell>  <TableCell>+92 31507055586</TableCell>
+                <TableCell>Phone</TableCell>  <TableCell>+92 315 7055586</TableCell>
               </TableRow>
               <TableRow sx={{
                 '&:not(:last-child) td': {
