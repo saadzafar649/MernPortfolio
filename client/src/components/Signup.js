@@ -1,4 +1,4 @@
-import { Box, Card, CardActions, FormControl, FormGroup, Input, InputAdornment, InputLabel, TextField, Typography, Button } from '@mui/material';
+import { Box, Card, CardActions, FormControl, TextField, Typography, Button } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Mail from '@mui/icons-material/Mail';
 import Phone from '@mui/icons-material/Phone';
@@ -18,7 +18,7 @@ const Signup = () => {
     <Box sx={{ display: "flex", justifyContent: "center", overflow: 'clip', margin: 5 }}>
 
       <Card sx={{ minWidth: 200, maxWidth: 800, width: 600, display: 'flex', justifyContent: "center", flexFlow: 'wrap',  
-        border: '1px solid #ccc', borderRadius: 3,
+        border: '1px solid #ccc', borderRadius: 1,
         backdropFilter: 'blur(20px)',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         paddingBottom:3,paddingTop:3, 

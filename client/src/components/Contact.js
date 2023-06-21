@@ -50,7 +50,7 @@ const Contact = () => {
     <Box sx={{ display: "flex", justifyContent: "center", margin: 5 }}>
       <Card sx={{
         minWidth: 200, maxWidth: 900, width: 900,
-        border: '1px solid #ccc', borderRadius: 3,
+        border: '1px solid #ccc', borderRadius: 1,
         backdropFilter: 'blur(20px)',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         padding: 3

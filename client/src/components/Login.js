@@ -1,10 +1,6 @@
-import { Box, Card, CardActions, FormControl, FormGroup, Input, InputAdornment, InputLabel, TextField, Typography, Button } from '@mui/material';
-import AccountCircle from '@mui/icons-material/AccountCircle';
+import { Box, Card, CardActions, FormControl, TextField, Typography, Button } from '@mui/material';
 import Mail from '@mui/icons-material/Mail';
-import Phone from '@mui/icons-material/Phone';
-import Password from '@mui/icons-material/Password';
 import PasswordTwoTone from '@mui/icons-material/PasswordTwoTone';
-import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
 // import '@mui/icons-material/index'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -19,9 +15,9 @@ const Login = () => {
 
       <Card sx={{
         minWidth: 200, maxWidth: 800, width: 600, display: 'flex', justifyContent: "center", flexFlow: 'wrap',
-        border: '1px solid #ccc', borderRadius: 8,
+        border: '1px solid #ccc', borderRadius: 1,
         backdropFilter: 'blur(20px)',
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         paddingBottom:3,paddingTop:3,
       }}>
         <Typography variant="h5" component="h5" sx={{ fontWeight: 700 }}>

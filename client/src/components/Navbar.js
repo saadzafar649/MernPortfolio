@@ -29,7 +29,7 @@ const Navbar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <img src={logo} alt="logo" style={{ height: 60 }}></img>
+      <img src={logo} alt="logo" style={{ height: 60 }}/>
       <Divider />
       <List>
         {navItems.map((item) => (
