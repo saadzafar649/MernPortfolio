@@ -1,6 +1,5 @@
 {
-    "routes": [
-      { "src": "/api/.*", "dest": "https://mern-portfolio-tau.vercel.app/api/:splat" }
-    ]
-  }
-  
+  "routes": [
+    { "src": "/api/.*", "dest": "https://mern-portfolio-wawm.vercel.app/api/:splat" }
+  ]
+}
