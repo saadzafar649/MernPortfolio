@@ -5,8 +5,14 @@ const bcrypt = require('bcryptjs');
 
 require('../db/conn');
 const User = require('../model/userSchema')
+
+
+
+app.use('/api', router);
+
+
 router.get('/',(req, res)=>{
-    res.send('hello sent from my server router')
+    res.send('hello sent from my server router api')
 });
 
 // router.post('/register', (req,res)=>{
@@ -90,4 +96,5 @@ router.post('/login',async (req,res)=>{
         return res.status(404).json({error:err});
     }
 });
+
 module.exports = router;
