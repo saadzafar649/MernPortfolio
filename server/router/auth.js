@@ -7,11 +7,7 @@ require('../db/conn');
 const User = require('../model/userSchema')
 
 
-
-app.use('/api', router);
-
-
-router.get('/',(req, res)=>{
+router.get('/', (req, res) => {
     res.send('hello sent from my server router api')
 });
 
@@ -33,68 +29,70 @@ router.get('/',(req, res)=>{
 //     }).catch(err=>console.log(err));
 // });
 
-router.post('/register',async (req,res)=>{
+router.post('/register', async (req, res) => {
     console.log(req.body)
-    const { name, email, phone, work, password, cpassword} = req.body
-    if(!name || !email || !phone || !work || !password || !cpassword){
-        return res.status(422).json({error: "Please fill the field properly"})
+    const { name, email, phone, work, password, cpassword } = req.body
+    if (!name || !email || !phone || !work || !password || !cpassword) {
+        return res.status(422).json({ error: "Please fill the field properly" })
     }
 
-    try{
-        const userExist = await User.findOne({email:email});
+    try {
+        const userExist = await User.findOne({ email: email });
 
-        if(userExist){
-            return res.status(422).json({error:"Email already registered"})
+        if (userExist) {
+            return res.status(422).json({ error: "Email already registered" })
         }
-        else if(password != cpassword){
-            return res.status(422).json({error:"Password is not same as confirm password"})
+        else if (password != cpassword) {
+            return res.status(422).json({ error: "Password is not same as confirm password" })
         }
-        
+
         const user = new User(req.body);
         const userRegister = await user.save();
-        
-        if(userRegister){
-            res.status(201).json({message: "User registered successfully"});
-        }else{
-            res.status(500).json({error:"Failed to register"});
+
+        if (userRegister) {
+            res.status(201).json({ message: "User registered successfully" });
+        } else {
+            res.status(500).json({ error: "Failed to register" });
         }
     }
-    catch(err){
+    catch (err) {
         console.log(err)
     }
 });
 
 
-router.post('/login',async (req,res)=>{
-    try{
-        const { email, password} = req.body;
-        if(!email ||!password ){
-            return res.status(400).json({error: "Please fill the field properly"});
+router.post('/login', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) {
+            return res.status(400).json({ error: "Please fill the field properly" });
         }
-        
-        const userExist = await User.findOne({email:email});
-        
-        if(!userExist){
-            return res.status(422).json({error:"Invalid Credentials"})
+
+        const userExist = await User.findOne({ email: email });
+
+        if (!userExist) {
+            return res.status(422).json({ error: "Invalid Credentials" })
         }
-        
-        const isMatch = await bcrypt.compare(password,userExist.password);
-        
-        if(!isMatch){
-            return res.status(422).json({error:"Invalid Credentials"})
+
+        const isMatch = await bcrypt.compare(password, userExist.password);
+
+        if (!isMatch) {
+            return res.status(422).json({ error: "Invalid Credentials" })
         }
-        
+
 
         const token = await userExist.generateAuthToken();
-        res.cookie("jwttoken",token,{
-            expires:new Date(Date.now()+25892000000),
+        res.cookie("jwttoken", token, {
+            expires: new Date(Date.now() + 25892000000),
             httpOnly: true
         })
-        return res.status(200).json({token:token});
+        return res.status(200).json({ token: token });
     }
-    catch(err){
-        return res.status(404).json({error:err});
+    catch (err) {
+        return res.status(404).json({ error: err });
     }
 });
+
+
 
 module.exports = router;
