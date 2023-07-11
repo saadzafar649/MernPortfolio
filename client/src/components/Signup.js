@@ -45,7 +45,7 @@ const Signup = () => {
 
     const data = await res.json();
 
-    if(!data || data.status === 422 || data.status === 500){
+    if(!data || res.status === 422 || res.status === 500){
       window.alert(data.error)
     }else{
       window.alert("Registration Successfull")
